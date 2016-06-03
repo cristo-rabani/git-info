@@ -1,7 +1,7 @@
 # Git Info
 Adds git info to bundle
 
-## Instalation
+## installation
 ```sh
 $ meteor cristo:git-info
 ```
