@@ -9,11 +9,10 @@ class ValidateVersion {
         if (typeof output !== 'string') {
             try {
                 output = exec('git log -1 --format="%D @%h"');
-                // output = shelljs.exec('git log -1 --format=%D@%h', {silent:true}).stdout || '';
             } catch (e) {
                 output = '';
             }
-            output = output.replace(/HEAD|[\n\r"]/g, '');
+            output = output.replace(/HEAD|[\n\r"]|(?:^|\s+)?%D\s/g, '');
             output = output.replace(/^\s\->\s/g, '');
             output = 'SiteVersion = "' + output + '";';
         }
