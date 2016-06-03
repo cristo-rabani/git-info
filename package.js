@@ -1,6 +1,6 @@
 Package.describe({
     name: 'cristo:git-info',
-    version: '0.0.1',
+    version: '1.0.0',
     // Brief, one-line summary of the package.
     summary: 'Adds git info to bundle',
     // URL to the Git repository containing the source code for this package.
